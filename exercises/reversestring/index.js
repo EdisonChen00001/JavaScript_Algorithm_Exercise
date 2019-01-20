@@ -8,35 +8,30 @@
 
 function reverse(str) {
   /*
-  soultion 1 
-  len = str.length;
-  result = "";
-  for (var i = len - 1; i > -1; i--) {
-    result += str[i];
-  }
-  return result;
+  #1
+  const arr = str.split('').reverse().join('')
+  return arr*/
+
+  /*const lenth = str.length;
+  var result = '';
+  for (var i=lenth-1; i>-1;i--){
+    result = result+ str[i]
+  } 
+  return result
   */
 
-  /*
-  soultion    into array -> reverse() --> join("") array
-  str = str.split("").reverse().join("")
-  return str
-  */
-
-  /*
-  soultion 3
-  result = ""
-  for (let character of str){
-
-    result = character + result
+  /** 
+  let result = '';
+  for(let character of str){
+    result = character+result;
   }
   return result
   */
 
-  /*reduce way*/
-  const reducer = (a , b) => b+a
-  str = str.split("").reduce(reducer)
-  return str
+    return str.split('').reduce(
+      (reversed, character)=> character + reversed
+    ,'');
+
 }
 
 module.exports = reverse;
