@@ -9,21 +9,28 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
-    /*if (n > 0){
-        temp =  parseInt(n.toString().split("").reverse().join("")) 
-        return temp
-    }else if(n === 0 ){
-        return 0
-    }else{
-        temp = n*(-1)
-        temp =  parseInt(n.toString().split("").reverse().join("")) 
-        temp = temp*(-1)
-        return temp    
-    }*/
-
+  if(n == 0){
+      return 0
+  }
+  if (n > 0) {
+    let result1 = n
+      .toString()
+      .split("")
+      .reverse()
+      .join("")
+    result1 = parseInt(result1);
+    return result1;
+  } else if(n <0){
+    n = n*(-1);
+    let result2 = n
+      .toString()
+      .split("")
+      .reverse()
+      .join("");
+    result2 = parseInt(result2);
+    result2 = result2 * -1;
+    return result2;
+  }
 }
-
-
-
 
 module.exports = reverseInt;
