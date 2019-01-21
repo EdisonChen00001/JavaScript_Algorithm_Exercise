@@ -12,16 +12,18 @@
 
 // chunk([1, 2, 3, 4], 2) 
 function chunk(array, size) {
-    const chunkList = []
+    
+    const chunked = []
     for (let element of array){
-        const last = chunkList[chunkList.length -1 ]
+        const last = chunked[chunked.length -1];
         if(!last || last.length === size){
-            chunkList.push([element])
+            chunked.push([element]);
         }else{
             last.push(element)
         }
     }
-    return chunkList
+    return chunked
+
 
 }
 
