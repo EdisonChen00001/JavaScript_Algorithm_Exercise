@@ -29,7 +29,7 @@ function palindrome(str) {
     */
 
 
-    /*利用JavaScript every() 函数*/
+    /*利用JavaScript every() 函数
 
     const temp = str.split("").every(
         (char, index) => {
@@ -37,6 +37,22 @@ function palindrome(str) {
         }
        )
     return temp
+    */
+    /*
+    var result1 = str;
+    var result2 = str.split('').reverse().join('');
+    if(result1 === result2){
+        return true
+    }else{
+        return false
+    }*/
+/*
+    return str.split('').every((char,i) =>{
+        return char === str[str.length-i -1]
+    })
+*/
+
+    return str.split('').every((char, i)=>{return char === str[str.length -i -1]})
 }
 
 module.exports = palindrome;
