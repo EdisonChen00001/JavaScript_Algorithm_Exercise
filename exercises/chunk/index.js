@@ -12,7 +12,7 @@
 
 // chunk([1, 2, 3, 4], 2) 
 function chunk(array, size) {
-   const chunked = []
+   /*const chunked = []
    for (let element of array){
        const last = chunked[chunked.length-1];
        if(!last || last.length === size){
@@ -22,7 +22,18 @@ function chunk(array, size) {
        }
    }
 
-   return chunked
+   return chunked*/
+
+
+   //#soultuin #2 
+   const chunked = [];
+   let index = 0;
+
+   while(index < array.length){
+       chunked.push(array.slice(index, index+ size));
+        index +=size;
+    }
+    return chunked
 }
 
 module.exports = chunk;
