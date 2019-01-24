@@ -9,7 +9,7 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-    const aCharMap = buildCharMap(stringA);
+  /*  const aCharMap = buildCharMap(stringA);
     const bCharMap = buildCharMap(stringB);
     if(Object.keys(aCharMap).length !== Object.keys(bCharMap).length){
       return false;
@@ -29,7 +29,9 @@ function buildCharMap(str){
   for(let char of str.replace(/[^\w]/g, '').toLowerCase()){
     charMap[char] = charMap[char] + 1 || 1;
   }
-  return charMap
+  return charMap*/
+
+  //另一个方法用sort()排序来做
 }
 
 
